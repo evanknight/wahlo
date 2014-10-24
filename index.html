@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+      <link rel="icon" type="image/ico" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Best Guitar Tuner">
+    <meta name="author" content="Evan Knight">
+
+    <title>Wahlo - The Best Guitar Tuner</title>
+    
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300|Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+	 
+	<!-- jQuery-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<!-- Tuner JS-->
+	<script src="js/audio.js"></script>
+
+  </head>
+
+<body>
+
+   <!-- Side Menu -->
+   <h4><a id="menu-toggle" href="#" class="toggle more">+</a></h4>
+<div id="sidebar-wrapper">
+   <ul class="sidebar-nav">
+      <a id="menu-close" href="#" class="white pull-right toggle">X</a>
+      <p class="more-description">An awesome, minimal, and colorful guitar tuner. Sounds
+      are original.<br><a href="mailto:eknight15@gmail.com?Subject=Wahlo"> contact me: Evan Knight</a>
+      </p>
+      
+      <a href="https://twitter.com/EvanNite" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @EvanNite</a>
+      <hr>
+                
+      <div class="share-buttons" >
+         <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p%5Btitle%5D=Wahlo%20-%20Free%20Online%20Guitar%20Tuner&amp;p%5Burl%5D=http%3A%2F%2Fwww.wahlo.com&amp;p%5Bsummary%5D=An%20awesome,%20minimal,%20and%20colorful%20guitar%20tuner&amp;p%5Bimages%5D%5B0%5D=http://wahlo.com/img/wahlo-logo.png" target="_blank" class="btn btn-lg btn-primary">FB Share</a>
+         <a href="https://twitter.com/share" data-url="Sick, minimalistic online guitar tuner - http://wahlo.com" data-via="evannite" data-size="large" data-count="none" data-hashtags="guitar" class="btn btn-lg btn-info" target="_blank">Tweet</a>
+      </div>
+      
+      <hr>
+      
+      <p class="copyright">Best viewed in Chrome or Safari. <br>
+      Copyright 2014 - looks official right? Copy if you want, I guess the worst thing
+      is more people will be in tune.
+      </p>
+      
+   </ul>
+</div>
+<!-- /Side Menu -->
+
+<!-- Content -->
+<div class="rotate pull-left"><a href="http://wahlo.com"><img  id="logo" src="img/wahlo-logo.png" alt="logo"></a></div>
+<div id="top" class="header">
+   <div id="press-letters">
+      <p id="keyboard-tagline">simply use the corresponding keyboard controls to tune with perfect notes</p>
+      <h2 id="text-notes">E - A - D - G - B - 3 <small>(for high E)</small></h2>
+   </div>
+   <div id="loading">
+      <h2 class="thin">loading the best keyboard enabled guitar tuner...</h2>
+      <br>
+      <img id="loading-spinner" src="img/spinner.png" alt="loading">
+   </div>
+   <div id="letter"></div>
+   <br>
+<!-- /Content -->   
+
+
+   <!-- #Note-Buttons for devices that don't have keyboard -->
+   <div  id="note-buttons">
+      <button type="button" onclick="play(0)" class="btn btn-default btn-lg btn-block">Low E</button>
+      <button type="button" onclick="play(1)" class="btn btn-default btn-lg btn-block">A</button>
+      <button type="button" onclick="play(2)" class="btn btn-default btn-lg btn-block">D</button>
+      <button type="button" onclick="play(3)" class="btn btn-default btn-lg btn-block">G</button>
+      <button type="button" onclick="play(4)" class="btn btn-default btn-lg btn-block">B</button>
+      <button type="button" onclick="play(5)" class="btn btn-default btn-lg btn-block">High E</button>
+   </div>
+</div>
+<!-- /Buttons -->
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- Sidebar Smoothing -->
+<script>
+
+   // menu close function
+   $("#menu-close").click(function(e) {
+       e.preventDefault();
+       $("#sidebar-wrapper").toggleClass("active");
+   });
+</script>
+
+<script>
+
+   // menu open function
+   $("#menu-toggle").click(function(e) {
+       e.preventDefault();
+       $("#sidebar-wrapper").toggleClass("active");
+   });
+</script>
+
+<!-- Twitter JS -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+<!-- Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46299572-1', 'wahlo.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+ 

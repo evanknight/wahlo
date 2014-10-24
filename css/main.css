@@ -1,0 +1,231 @@
+/*  Some more global styles are in bootstrap.css */
+
+/******************** ===[ Custom Global Styles ]=== ********************/
+
+html { background: #3A9685 }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #3f3f3f;
+    margin: 1em 0;
+    padding: 0;
+}
+
+h1 { font-family: 'Oswald', sans-serif }
+
+a { color: #ccc }
+
+a:hover {
+    color: #3A9685;
+    text-decoration: none;
+}
+
+.thin {
+    font-weight: 300;
+    font-family: 'Oswald', sans-serif;
+}
+
+#logo {
+    max-width: 130px;
+    padding: 10px 20px 40px 20px;
+}
+
+.header {
+    display: table;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/******************* ===[ Loading ]=== ******************/
+
+#loading {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#loading-spinner { 
+	-webkit-animation: rotation 1s infinite linear 
+}
+
+/******************** ===[ Keyboard Text & Note Display ]=== ********************/
+
+#press-letters {
+    position: relative;
+    margin-top: -60px;
+    text-align: center;
+}
+
+#letter {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 200px;
+    text-align: center;
+}
+
+#keyboard-tagline { font-style: italic }
+
+#note-buttons { display: none }
+
+/******************* ===[ jQuery Display None ]=== *******************/
+
+#press-letters { display: none }
+
+
+/******************** ===[ Sidebar Menu ]=== ********************/
+
+#sidebar-wrapper {
+    margin-right: -250px;
+    right: 0;
+    top: -20px;
+    width: 250px;
+    background: #000;
+    position: fixed;
+    height: 150%;
+    overflow-y: auto;
+    z-index: 1000;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    line-height: 40px;
+    text-indent: 20px;
+}
+
+.sidebar-nav li a {
+     color: #999999;
+     display: block;
+     text-decoration: none;
+ }
+
+.sidebar-nav li a:hover {
+     color: #fff;
+     background: rgba(255,255,255,0.2);
+     text-decoration: none;
+ }
+
+.sidebar-nav li a:active,
+
+.sidebar-nav li a:focus { text-decoration: none }
+
+#menu-toggle {
+    top: -50px;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+    font-size: 100px;
+}
+
+#sidebar-wrapper.active {
+    right: 250px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.toggle { margin: 25px 15px 0 0 }
+
+.share-buttons { 
+margin: 0 0 10px 24px; 
+}
+
+.more {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.more:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.more-description {
+    margin-top: 50px;
+    font-size: 18px;
+    padding: 18px;
+    text-align: center;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 13px;
+    padding: 18px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+#menu-close { font-size: 30px }
+
+.twitter-follow-button { margin-left: 38px }
+
+
+/******************** ===[ CSS3 Stuff for logo and loading gif ]=== ********************/
+
+@-webkit-keyframes rotation { 
+    from { -webkit-transform: rotate(0deg) }
+    to { -webkit-transform: rotate(359deg) }
+}
+
+.rotate {
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    overflow: hidden;
+}
+
+.rotate:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+
+/******************** ===[ Responsive for phones ]=== ********************/
+
+@media (max-width:700px) { 
+    #press-letters { display: none }
+    h2 { font-size: 20px }
+    #keyboard-tagline { display: none }
+    #text-notes { display: none }
+    #note-buttons {
+        margin-top: 30px;
+        display: block;
+        padding: 20px;
+        margin: 8px;
+    }
+    .more {
+        font-size: 16px;
+        position: relative;
+    }
+    #menu-toggle {
+        position: relative;
+        float: right;
+    }
+}
